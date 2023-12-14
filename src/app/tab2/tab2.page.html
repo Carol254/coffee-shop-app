@@ -1,17 +1,128 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Tab 2
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-content>
+    <div class="top">
+      <div class="header">
+        <ion-searchbar class="search" placeholder="Search your coffee..."></ion-searchbar>
+        <img src="\assets\latte.jpg" class="profile">
+      </div>
+      <div class="intro">
+        <h3>Good {{currentTime}},</h3>
+        <p>Grab your first coffee this {{currentTime}}</p>
+      </div>
+
+      <div class="options" >
+        <ion-button *ngFor="let option of options">{{option.name}}</ion-button>
+      </div>
+
+      <div class="scroll-container">
+        <div class="types">
+            <div class="coffeeOptions">
+                <div class="cardImg"> <img src="\assets\cappucino.jpg" ></div>
+                <div class="cardInfo">
+                  <ion-card>
+                      <ion-card-header>
+                        <ion-card-title>
+                          <div class="title">
+                            <div>Espresso</div>
+                            <div class="rate"><ion-icon name="star"></ion-icon> 4.5</div>
+                          </div>
+                        </ion-card-title>
+                        <ion-card-subtitle>With Milk</ion-card-subtitle>
+                      </ion-card-header>
+                    
+                      <ion-card-content>
+                        <div class="title">
+                          <div>Espresso</div>
+                          <div class="add">+</div>
+                        </div>
+                      </ion-card-content>
+                  </ion-card>
+                </div>
+            </div>
+    
+            <div class="coffeeOptions">
+              <div class="cardImg"> <img src="\assets\instant-coffee.jpg" ></div>
+              <div class="cardInfo">
+                <ion-card>
+                    <ion-card-header>
+                      <ion-card-title>
+                        <div class="title">
+                          <div>Coffee</div>
+                          <div class="rate"><ion-icon name="star"></ion-icon> 4.0</div>
+                        </div>
+                      </ion-card-title>
+                      <ion-card-subtitle>With Milk</ion-card-subtitle>
+                    </ion-card-header>
+                  
+                    <ion-card-content>
+                      <div class="title">
+                        <div>Black Coffee</div>
+                        <div class="add">+</div>
+                      </div>
+                    </ion-card-content>
+                </ion-card>
+              </div>
+          </div>
+
+            <div class="coffeeOptions">
+              <div class="cardImg"> <img src="\assets\latte.jpg" ></div>
+              <div class="cardInfo">
+                <ion-card>
+                    <ion-card-header>
+                      <ion-card-title>
+                        <div class="title">
+                          <div>Latte</div>
+                          <div class="rate"><ion-icon name="star"></ion-icon> 4.2</div>
+                        </div>
+                      </ion-card-title>
+                      <ion-card-subtitle>With Milk</ion-card-subtitle>
+                    </ion-card-header>
+                  
+                    <ion-card-content>
+                      <div class="title">
+                        <div>Latte</div>
+                        <div class="add">+</div>
+                      </div>
+                    </ion-card-content>
+                </ion-card>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dealsBottom">
+        <div>Today's Deal</div>
+            <div class="deal">
+              <img class="dealImg" src="\assets\black-coffee.jpg">
+              <div class="_content">
+                <p>BigMac + Fries</p>
+                <p>4.3</p>
+                <b>$12.75</b>
+              </div>
+              <div class="addDeals">
+                <div class="addDealBtn">+</div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </ion-content>
 </ion-content>

@@ -1,0 +1,138 @@
+.top{
+    background-color: black;
+    height: 50%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+    .profile{
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+}
+.search{
+    outline: none !important;
+    border: none !important;
+    color: #ff8e27;
+    width: 80%;
+    display: flex;
+}
+
+.intro{
+    color: #ffff;
+}
+.options{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    
+    ion-button{
+        --background: rgb(92, 89, 89) !important;
+        --color: #fff;
+        --border-radius: 8px;
+        --padding: 10px;
+    }
+    ion-button:hover{
+        --background: #ff8e27 !important;
+    }
+    ion-button:focus{
+        --background: #ff8e27 !important;
+    }
+}
+.scroll-container{
+    overflow-x: auto;
+    width: 100%;
+}
+.types{
+    display: flex;
+    justify-content: space-between !important;
+    width: 900px;
+    margin-top: 10px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.coffeeOptions{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .cardImg{
+        top: 0;
+        z-index: 40;
+        position: absolute;
+
+        img{
+            border-radius: 20px;
+        }
+    }
+    .cardInfo{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        padding-top: 20px;
+    }
+}
+.bottom{
+    background-color: #fff;
+    height: 50%;
+}
+.dealImg{
+    width: 100px;
+    height: 100%;
+    border-radius: 20px;
+}
+.dealsBottom{
+    display:flex;
+    flex-direction: column;
+    // margin: auto;
+    // height: 100%;
+}
+.deal{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff8f3;
+    width: 90%;
+    border-radius: 20px;
+}
+.add{
+    font-size: 20px;
+    background-color: #ff8e27;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+.addDeals{
+    width: 35px;
+    height: 35px;
+    background-color: #ff8e27;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: -18px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.addDealBtn{
+    font-size: 25px;
+}
+.rate{
+    color: #ff8e27;
+}
+ion-icon{
+    font-size: small;
+}

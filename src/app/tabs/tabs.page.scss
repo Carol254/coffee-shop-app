@@ -1,5 +1,4 @@
-ion-tab-button:active{
-    ion-icon{
-        --color:#ff8e27 !important;
-    }
-}
+ion-tab-button.tab-selected ion-icon ,ion-label {
+    color: #ff8e27;
+  }
+  

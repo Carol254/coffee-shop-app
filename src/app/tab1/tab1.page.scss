@@ -1,8 +1,15 @@
-._content{
-    background-image: url('/assets/bg-photo.jpg');
-    background-size: cover;
+ion-content > #background-content{
+    background-image: url('/assets/cofee-shop-bg.png');
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    height:100vh;
-    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
+
+  
+  
+

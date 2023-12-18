@@ -1,0 +1,46 @@
+ion-content >.main{
+    background-color:black;
+    height: 100%;
+    position: relative;
+    overflow-y: hidden;
+}
+ion-content >.main > .background-content{
+    position: absolute;
+    height: 50%;
+    top:25%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    img{
+        width:300px !important;
+        height: 300px !important;
+        object-fit: contain;
+    }
+}
+
+ion-content >.main > .info{
+    position: absolute;
+    bottom: 0;
+    background-color: linear-gradient(#4d3c2f,#3b2d21);
+    left:0;
+    right: 0;
+    height: 40%;
+    color: #fff;
+    padding: 0px 10px;
+
+    p{
+        color: #ff8e27;
+    }
+}
+.bottomSection{
+    display: flex;
+    justify-content: space-between;
+
+    ion-button{
+        --background:#ff8e27 ;
+    }
+}
+
+  
+  
+

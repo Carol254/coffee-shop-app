@@ -1,138 +1,121 @@
-.top{
-    background-color: black;
-    height: 50%;
-}
-
-.header{
+._content{
     display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-
-    .profile{
-        width: 48px;
-        height: 48px;
-        object-fit: contain;
-        border-radius: 50%;
-    }
-
-}
-.search{
-    outline: none !important;
-    border: none !important;
-    color: #ff8e27;
-    width: 80%;
-    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.intro{
-    color: #ffff;
-}
-.options{
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between;
-    
-    ion-button{
-        --background: rgb(92, 89, 89) !important;
-        --color: #fff;
-        --border-radius: 8px;
-        --padding: 10px;
-    }
-    ion-button:hover{
-        --background: #ff8e27 !important;
-    }
-    ion-button:focus{
-        --background: #ff8e27 !important;
-    }
-}
-.scroll-container{
-    overflow-x: auto;
-    width: 100%;
-}
-.types{
-    display: flex;
-    justify-content: space-between !important;
-    width: 900px;
+.mainImg{
+    border-radius: 20px;
+    position:relative;
     margin-top: 10px;
-}
-.title{
-    display: flex;
-    justify-content: space-between;
-}
 
-.coffeeOptions{
+    ion-img::part(image){
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+}
+.backBtn{
+    position: absolute;
+    top:0;
+    background-color: aliceblue;
+    margin-left: 10px;
+    margin-top: 5px;
+    color:#ff8e27;
+    padding: 6px;
+    border-radius: 7px;
+
+}
+.rating{
+    position: absolute;
+    bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    color:#ff8e27;
+    border-radius: 10px;
+    padding:6px;
+}
+.price{
+    display: flex;
+    justify-content: space-around !important;
+    width: 100%;
+    
+    h3{
+        font-weight: bold;
+        // font-size: 30px;
+    }
+}
+.typeName{
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 
-    .cardImg{
-        top: 0;
-        z-index: 40;
-        position: absolute;
-
-        img{
-            border-radius: 20px;
-        }
-    }
-    .cardInfo{
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        padding-top: 20px;
+    h3{
+        font-weight: bold;
     }
 }
-.bottom{
+.coffeeOrder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+}
+.sizes{
+    display: flex;
+    justify-content: space-evenly;
+    .ion-24{
+        font-size: 24px;
+    }
+    .ion-32{
+        font-size: 32px;
+    }
+    .ion-40{
+        font-size: 40px;
+    }
+}
+.numbers{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.num{
     background-color: #fff;
-    height: 50%;
-}
-.dealImg{
-    width: 100px;
-    height: 100%;
-    border-radius: 20px;
-}
-.dealsBottom{
-    display:flex;
-    flex-direction: column;
-    // margin: auto;
-    // height: 100%;
-}
-.deal{
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff8f3;
-    width: 90%;
-    border-radius: 20px;
-}
-.add{
-    font-size: 20px;
-    background-color: #ff8e27;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 8px;
-}
-.addDeals{
-    width: 35px;
-    height: 35px;
-    background-color: #ff8e27;
-    color: #fff;
-    border-radius: 4px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: -18px;
+    border:1px grey solid;
+    border-radius: 50%;
+    padding: 3px 8px;
     align-items: center;
-    display: flex;
-    justify-content: center;
+    margin: auto;
+    cursor: pointer;
 }
-.addDealBtn{
-    font-size: 25px;
+
+ion-button{
+    --background: #000 !important;
+    --color: #fff;
+
 }
-.rate{
-    color: #ff8e27;
+.btn{
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
-ion-icon{
-    font-size: small;
+.bg-selected{
+    background-color: #000;
+    color:#fff;
+    border:1px grey solid;
+    border-radius: 50%;
+    padding: 3px 8px;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+}
+h6{
+    font-weight: bold;
+    // font-size: 20px;
+}
+.ordersRow{
+   display: flex;
+   justify-content: space-around !important;
+   width: 100% !important;
 }

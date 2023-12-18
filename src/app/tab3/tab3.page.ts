@@ -10,4 +10,29 @@ export class Tab3Page {
 
   constructor() {}
 
+
+  coffeeTypes:any =[
+    {
+      name:'Espresso',
+      extras:'with Milk',
+      price:'$6.75',
+      orders: '',
+      image:'/assets/latte.jpg'
+    },
+    {
+      name:'Espresso',
+      extras:'with Cream + Cookies',
+      price:'$6.75',
+      image: '/assets/cappucino.jpg',
+      orders: ''
+    },
+    {
+      name:'Cappuccino',
+      extras:'with Cream + Cookies',
+      price:'$18.99',
+      orders: '',
+      image: '/assets/instant-coffee.jpg'
+    }
+  ]
+
 }

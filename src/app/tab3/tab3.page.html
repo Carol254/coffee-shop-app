@@ -1,18 +1,23 @@
 <ion-content>
-  <div class="variety" *ngFor="let coffeType of coffeeTypes">
-    <ion-card class="card">
-      <div class="cardContent">
-        <div><ion-card-content><img src="{{coffeType.image}}"> </ion-card-content></div>
-        <div>
-          <ion-card-header class="l-Text">{{coffeType.name}}</ion-card-header>
-          <ion-card-content class="s-Text">{{coffeType.extras}}</ion-card-content>
-          <ion-card-content class="l-Text">{{coffeType.price}}</ion-card-content>
+  <div class="swipeContainer">
+    <div class="variety" *ngFor="let coffeType of coffeeTypes">
+      <ion-card class="card">
+        <div class="cardContent">
+          <div><ion-card-content><img src="{{coffeType.image}}"> </ion-card-content></div>
+          <div>
+            <ion-card-header class="l-Text">{{coffeType.name}}</ion-card-header>
+            <ion-card-content class="s-Text">{{coffeType.extras}}</ion-card-content>
+            <ion-card-content class="l-Text">{{coffeType.price}}</ion-card-content>
+          </div>
+          <div><ion-card-content>{{coffeType.orders}}</ion-card-content></div>
         </div>
-        <div><ion-card-content>{{coffeType.orders}}</ion-card-content></div>
+      </ion-card>
+      <div class="deleteBtn">
+        <ion-icon name="trash" class="delete"></ion-icon>
       </div>
-    </ion-card>
+    </div>
   </div>
-
+  
   <ion-text>
     <div class="subTotal">
         <div><h3>Subtotal</h3></div>
@@ -23,7 +28,9 @@
       <div><h3>$5.99</h3></div>
     </div>
   </ion-text>
-  <p class="line">------------------------------------------------------------------------------------------------------</p>
+
+  <hr style="border-top:2px dotted  #461818;" />
+
   <ion-text>
     <div class="total">
       <div><h3>Total</h3></div>

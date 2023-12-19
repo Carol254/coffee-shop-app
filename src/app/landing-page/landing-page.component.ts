@@ -13,7 +13,7 @@ export class LandingPageComponent  implements OnInit {
   ngOnInit() {}
 
   next(){
-      this.router.navigate(['/tabs/tab1']);
+      this.router.navigate(['/home']);
   }
 
 }

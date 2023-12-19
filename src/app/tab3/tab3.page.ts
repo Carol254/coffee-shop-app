@@ -1,4 +1,6 @@
-import { Component} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import { GestureController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tab3',
@@ -8,7 +10,7 @@ import { Component} from '@angular/core';
 export class Tab3Page {
 
 
-  constructor() {}
+  constructor(private gestureCtrl: GestureController ) {}
 
 
   coffeeTypes:any =[

@@ -1,6 +1,9 @@
-ion-tab-button.tab-selected ion-icon ,ion-label {
+ion-tab-button.tab-selected ion-icon ,ion-label{
     color: #ff8e27;
   }
-  ion-tab-button:hover ion-icon{
+//   ion-tab-button, ion-title{
+//     color: black;
+//   }
+  ion-tab-button:hover ion-icon,ion-title{
       color: #ff8e27;
   }

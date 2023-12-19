@@ -2,7 +2,7 @@
   <ion-content>
     <div class="top">
       <div class="header"> 
-        <div><ion-icon name="arrow-back" class="backBtn" (click)="back()"></ion-icon></div> 
+        <div><ion-icon name="arrow-back" class="backBtn" (click)="back()"></ion-icon></div>
         <ion-searchbar class="search" placeholder="Search your coffee..."></ion-searchbar>
         <img src="\assets\latte.jpg" class="profile">
       </div>
@@ -24,7 +24,7 @@
                       <ion-card-header>
                         <ion-card-title>
                           <div class="title">
-                            <div>Espresso</div>
+                            <div class="name">Espresso</div>
                             <div class="rate"><ion-icon name="star"></ion-icon> 4.5</div>
                           </div>
                         </ion-card-title>
@@ -33,7 +33,7 @@
                     
                       <ion-card-content>
                         <div class="title">
-                          <div>Espresso</div>
+                          <div class="price">$7.00</div>
                           <div class="add">+</div>
                         </div>
                       </ion-card-content>
@@ -48,7 +48,7 @@
                     <ion-card-header>
                       <ion-card-title>
                         <div class="title">
-                          <div>Coffee</div>
+                          <div class="name">Coffee</div>
                           <div class="rate"><ion-icon name="star"></ion-icon> 4.0</div>
                         </div>
                       </ion-card-title>
@@ -57,7 +57,7 @@
                   
                     <ion-card-content>
                       <div class="title">
-                        <div>Black Coffee</div>
+                        <div class="price">$6.25</div>
                         <div class="add">+</div>
                       </div>
                     </ion-card-content>
@@ -72,7 +72,7 @@
                     <ion-card-header>
                       <ion-card-title>
                         <div class="title">
-                          <div>Latte</div>
+                          <div class="name">Latte</div>
                           <div class="rate"><ion-icon name="star"></ion-icon> 4.2</div>
                         </div>
                       </ion-card-title>
@@ -81,7 +81,7 @@
                   
                     <ion-card-content>
                       <div class="title">
-                        <div>Latte</div>
+                        <div class="price">$4.30</div>
                         <div class="add">+</div>
                       </div>
                     </ion-card-content>
@@ -92,19 +92,19 @@
       </div>
 
       <div class="dealsBottom">
-        <div>Today's Deal</div>
+        <h3 style="font-weight: bold; color:#461818;">Today's Deal</h3>
             <div class="deal">
-              <img class="dealImg" src="\assets\black-coffee.jpg">
+              <img class="dealImg" src="\assets\bg-photo.jpg">
               <div class="_content">
-                <p>BigMac + Fries</p>
-                <p>4.3</p>
-                <b>$12.75</b>
+                <p style="font-weight: bold; font-size: 20px;">BigMac + Fries</p>
+                <div class="rate"><ion-icon name="star"></ion-icon> 4.5</div>
+                <div class="strikePrice"><b>$12.75</b> <p class="price--line-through">$20.55</p></div>
               </div>
               <div class="addDeals">
                 <div class="addDealBtn">+</div>
               </div>
             </div>
-          </div>
+        </div>
         
     </div>
     <div class="bottom">

@@ -1,13 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>tab4</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">tab4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="main">
+      <div class="top">
+          <div class="personal-data">
+            <div class="name"><img src="\assets\latte.jpg" class="image"><p>John Doe</p></div>
+            <div class="phone">
+              <p>Phone</p>
+              <p>+5999-661-616</p>
+            </div>
+            <div class="mail">
+              <p>Mail</p>
+              <div>johndoe23&#64;gmail.com</div>
+            </div>
+          </div>
+      </div>
+
+      <div class="bottom">
+        <div class="section">
+          <div style="display: flex;align-items: center;">
+            <ion-icon name="moon"></ion-icon>
+            <p>Dark Mode</p>
+          </div>
+          <ion-toggle slot="end" checked="true" color="light"></ion-toggle>
+        </div>
+        <div class="section">
+          <div style="display: flex;align-items: center; column-gap: 5px;">
+            <ion-icon name="notifications"></ion-icon>
+            <p>Notifications</p>
+          </div>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </div>
+        <div class="section">
+          <div style="display: flex;align-items: center;">
+            <ion-icon name="time"></ion-icon>
+            <p>History</p>
+          </div>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </div>
+        <div class="section">
+          <div style="display: flex;align-items: center;">
+            <ion-icon name="card"></ion-icon>
+            <p>Payment</p>
+          </div>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </div>
+        <div class="section">
+          <div style="display: flex;align-items: center;">
+            <ion-icon name="help"></ion-icon>
+            <p>Help</p>
+          </div>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </div>
+        <div class="section">
+          <div style="display: flex;align-items: center;">
+            <ion-icon name="log-out"></ion-icon>
+            <p>Logout</p>
+          </div>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </div>
+      </div>
+    </div>
 </ion-content>

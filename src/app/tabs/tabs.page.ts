@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  isHomeSelected: boolean = false;
+
+  constructor(private router:Router) {}
+
+  isHomeTab():boolean{
+    return this.router.url === '/home';
+  }
+
+  isFavouriteTab():boolean{
+    return this.router.url === '/favourite';
+  }
 
 }

@@ -48,3 +48,11 @@ ion-toggle {
      --handle-background: #fff !important;
      --handle-background-checked: #fff!important;
    }
+   .btns{
+    display: flex;
+    justify-content: space-between;
+   }
+   ion-button{
+    --background: #000 !important;
+    --color: #fff;
+   }

@@ -59,7 +59,7 @@
         </div>
         <ion-modal trigger="open-modal" (willDismiss)="onWillDimiss($event)">
             <ng-template>
-              <ion-header>
+              <!-- <ion-header>
                 <ion-toolbar>
                   <ion-buttons slot="start">
                     <ion-button (click)="cancel()">Cancel</ion-button>
@@ -69,12 +69,16 @@
                     <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
                   </ion-buttons>
                 </ion-toolbar>
-              </ion-header>
+              </ion-header> -->
 
               <ion-content class="ion-padding">
                 <ion-item>
-                  Are you sure you want to logout?
+                  Are you sure you want to logout? 
                 </ion-item>
+                <div class="btns">
+                  <ion-button (click)="cancel()">Cancel</ion-button> <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                </div>
+
               </ion-content>
             </ng-template>
         </ion-modal>

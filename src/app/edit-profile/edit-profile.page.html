@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back()"><ion-icon name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button><ion-icon name="arrow-back"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-title size="large">Edit Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="ion-no-margin">
+    <ion-card-content>
+      <img [src]="imageUrl"  *ngIf="imageUrl" >
+      <h1>John Doe</h1>
+      <h2 margin-bottom>Client</h2>
+      <ion-button icon-left class="edit-avator" role="input" (click)="f.click()" >
+        <ion-icon name="photos"></ion-icon> 
+        Edit / Add Avatar
+      </ion-button>
+      <input class="ion-hide" #f type="file" id="file-input" (change)="handleFileInput($event)">
+    </ion-card-content>
+
+    <ion-grid class="ion-fixed ion-no-padding">
+      <ion-row>
+        <ion-col size="12" padding>
+          <ion-list margin-bottom>
+            <ion-item>
+              <ion-input label="Full Name" labelPlacement="fixed" inputmode="text" placeholder="Ex:John Doe" value="Doe John"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input  label="Email" labelPlacement="fixed" inputmode="email" placeholder="Ex:joe@doe.com" value="john2023@gmail.com"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input  label="Phone"  labelPlacement="fixed" placeholder="+2547000000"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input  label="Address" labelPlacement="fixed" placeholder="Ex: Mombasa"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-select class="city" label="City" labelPlacement="fixed">
+                <ion-select-option value="msa">Mombasa</ion-select-option>
+                <ion-select-option value="nbi">Nairobi</ion-select-option>
+                <ion-select-option value="ksm">Kisumu</ion-select-option>
+                <ion-select-option value="nkr">Nakuru</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button  color="dark" (click)="sendData()" class="ion-padding">Edit</ion-button>
+  </ion-card>
+</ion-content>

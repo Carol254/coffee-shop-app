@@ -6,8 +6,7 @@
     background-color: #ff8e27;
     border-radius:0px 0px 0px 30px;
     height:30%;
-    // padding-right: 30px;
-    // padding-left: 30px;
+ 
 
     .name{
         display: flex;
@@ -19,6 +18,10 @@
             width:40px;
             height:40px;
             border-radius: 50%;
+        }
+
+        .edit{
+            cursor: pointer;
         }
     }
     .phone,.mail{
@@ -56,3 +59,6 @@ ion-toggle {
     --background: #000 !important;
     --color: #fff;
    }
+.personal-data{
+    color: #fff;
+}

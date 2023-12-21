@@ -2,7 +2,7 @@
     <div class="main">
       <div class="top ion-padding">
           <div class="personal-data">
-            <div class="name"><img src="\assets\latte.jpg" class="image"><p>John Doe</p></div>
+            <div class="name"><img src="\assets\latte.jpg" class="image"><p>John Doe</p>  </div>
             <div class="phone">
               <b>Phone</b>
               <p>+5999-661-616</p>
@@ -15,12 +15,12 @@
       </div>
 
       <div class="bottom ion-padding">
-        <div class="section">
+        <div class="section" (click)="editProfile()">
           <div style="display: flex;align-items: center; column-gap: 5px;">
-            <ion-icon name="moon"></ion-icon>
-            <p>Dark Mode</p>
+            <ion-icon name="person"></ion-icon>
+            <p>Edit Profile</p>
           </div>
-          <ion-toggle slot="end" checked="true" color="light"></ion-toggle>
+          <ion-icon name="arrow-forward" class="edit"></ion-icon>
         </div>
         <div class="section">
           <div style="display: flex;align-items: center; column-gap: 5px;">
@@ -50,38 +50,14 @@
           </div>
           <ion-icon name="arrow-forward"></ion-icon>
         </div>
-        <div class="section" id="open-modal">
+        <div class="section" (click)="logOut()">
           <div style="display: flex;align-items: center; column-gap: 5px;">
             <ion-icon name="log-out"></ion-icon>
             <p>Logout</p>
           </div>
           <ion-icon name="arrow-forward"></ion-icon>
         </div>
-        <ion-modal trigger="open-modal" (willDismiss)="onWillDimiss($event)">
-            <ng-template>
-              <!-- <ion-header>
-                <ion-toolbar>
-                  <ion-buttons slot="start">
-                    <ion-button (click)="cancel()">Cancel</ion-button>
-                  </ion-buttons>
-                  <ion-title>Welcome</ion-title>
-                  <ion-buttons slot="end">
-                    <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-                  </ion-buttons>
-                </ion-toolbar>
-              </ion-header> -->
-
-              <ion-content class="ion-padding">
-                <ion-item>
-                  Are you sure you want to logout? 
-                </ion-item>
-                <div class="btns">
-                  <ion-button (click)="cancel()">Cancel</ion-button> <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-                </div>
-
-              </ion-content>
-            </ng-template>
-        </ion-modal>
+     
       </div>
     </div>
 </ion-content>

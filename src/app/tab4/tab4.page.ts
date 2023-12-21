@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonModal } from '@ionic/angular';
+import { AlertController, IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 
 @Component({
@@ -14,7 +14,10 @@ export class Tab4Page implements OnInit {
 
   message:any;
 
-  constructor(private router:Router) { }
+  constructor(
+    private router:Router,
+    public alertCtrl:AlertController
+    ) { }
 
   ngOnInit() {
   }
@@ -35,4 +38,32 @@ export class Tab4Page implements OnInit {
     }
   }
 
+  editProfile(){
+    this.router.navigate(['/profile/edit-profile']);
+  }
+
+  async logOut(){
+    const logout = await this.alertCtrl.create({
+      header:'LogOut',
+      message:'Are you sure you would like to logout?',
+      buttons:[
+        {
+          text:'NO',
+          handler: () =>{
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text:'YES',
+          handler: () =>{
+            console.log('Yes clicked');
+            this.router.navigate(['/login'])
+          }
+        }
+        
+      ]
+    });
+
+    logout.present();
+  }
 }

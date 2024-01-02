@@ -1,5 +1,4 @@
-ion-tab-button[aria-selected="true"] {
-    --background: #ff8e27;
+ion-tab-button.tab-selected ion-icon,ion-title{
     color: #ff8e27 !important;
   }
   
@@ -7,4 +6,6 @@ ion-tab-button[aria-selected="true"] {
   ion-tab-button:hover ion-title {
     color: #ff8e27 !important;
   }
-  
+  ion-tab-button ion-title{
+    color:grey !important;
+  }

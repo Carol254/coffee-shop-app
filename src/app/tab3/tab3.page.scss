@@ -1,23 +1,22 @@
-.variety{
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
+ion-title{
+    text-align: center;
+    color:#ff8e27;
+    font-size: x-large;
+    text-decoration: underline;
 }
 .card{
-    width: 319px;
-    height: 150px;
     border-radius: 20px;
-    // width: 100%;
-    // position: absolute;
     z-index: 2;
 }
-.cardContent{
+._content{
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 img{
    border-radius: 15px;
+   width: 50px;
+   height: 50px;
 }
 .l-Text{
     font-size: larger;
@@ -25,7 +24,7 @@ img{
     color: #461818;
 }
 .s-Text{
-    color:#ff8e27;
+    color:#461818;
     font-size: small;
 }
 .subTotal, .tax, .total{
@@ -55,16 +54,33 @@ img{
     justify-content: center;
     align-items: center;
    }
-   .swipeContainer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-   }
-
+ 
    .deleteBtn{
     .delete{
         font-size:30px;
         opacity: 0;
     }
    }
+
+.cardPrice{
+  position: absolute;
+//   top: 50%;
+  right: 0;
+}
+.desc , .description{
+    color: #000;
+}
+ion-card{
+    background: linear-gradient(0.25turn, #ff8e27, #ebf8e1, #ff8e27);
+}
+@media screen and (max-width:800px){
+    .description{
+     display: none;
+    }
+
+    ._content{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+}

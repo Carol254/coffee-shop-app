@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LoadingController, NavController, ToastController } from '@ionic/angular';
@@ -10,15 +11,25 @@ import { LoadingController, NavController, ToastController } from '@ionic/angula
 })
 export class EditProfilePage implements OnInit {
   imageUrl!: SafeResourceUrl;
+  myForm!: FormGroup;
 
   constructor(
     private router:Router,
     public navCtrl:NavController,
     public loadingCtrl: LoadingController,
     public toastCtrl: ToastController,
-    private sanitizer:DomSanitizer
+    private sanitizer:DomSanitizer,
+    private formBuilder:FormBuilder
 
-    ) { }
+    ){ 
+      this.myForm = this.formBuilder.group({
+        fullName: ['Doe John'],
+        email: ['john2023@gmail.com'],
+        phone: ['+2547000000'],
+        address: [''],
+        city: ['msa'],
+      });
+    }
 
   ngOnInit() {
   }
@@ -51,6 +62,10 @@ export class EditProfilePage implements OnInit {
       toast.present();
       this.navCtrl.navigateForward('/profile');
     })
+
+    const formData = this.myForm.value;
+    // Handle the form data as needed
+    console.log(formData);
   }
 
   async handleFileInput(event: any) {

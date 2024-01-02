@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+    <div class="header">
+      <ion-icon name="arrow-back" class="backBtn" (click)="back()"></ion-icon>
+      <ion-title> Search Results for {{results}}</ion-title>
+    </div>
+  
+    <div *ngFor="let recipe of recipes">
+      <ion-card class="ion-padding">
+        <ion-card-title>
+          {{recipe.recipe.label}}
+        </ion-card-title>
+        <div class="_content">
+          <ion-card-content>
+            <img class="image" [src]="recipe.recipe.image">
+            <p><b>Dish Type:</b>{{recipe.recipe.dishType}}</p>
+            <p><b>Cuisine Type:</b>{{recipe.recipe.cuisineType}}</p>
+          </ion-card-content>
+
+          <ion-card-content>
+             <p>price:$160</p> 
+             <ion-button routerLink="/cart">Buy Now</ion-button>
+          </ion-card-content>
+        </div>
+       
+      </ion-card>
+    </div>
+</ion-content>

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
-import { Icon } from 'ionicons/dist/types/components/icon/icon';
+import { ResultsService } from '../services/results.service';
+import { SearchResultsPage } from '../search-results/search-results.page';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -10,6 +12,9 @@ import { Icon } from 'ionicons/dist/types/components/icon/icon';
 export class Tab1Page implements OnInit {
 
   options:any[] =[];
+  search:string = '';
+
+  
 
   time: Date = new Date() ;
   currentTime: any;
@@ -26,22 +31,25 @@ export class Tab1Page implements OnInit {
     }
   ]
 
-  constructor(private router:Router) {}
+  constructor(private router:Router , private resultService:ResultsService ,public navCtrl:NavController) {}
 
   ngOnInit(): void {
     this.options = [
       {
-        name:'Filter',
+        name:'Mocha',
         icon: 'filter'
       },
       {
-        name:'Espresso'
+        name:'Espresso',
+        icon: 'filter'
       },
       {
-        name:'Cappuccino'
+        name:'Cappuccino',
+        icon: 'filter'
       },
       {
-        name:'latte'
+        name:'latte',
+        icon: 'filter'
       }
 
     
@@ -69,6 +77,17 @@ back(){
   this.router.navigate(['/login']);
 }
 
+getSearch(event:any){
+  event.preventDefault();
+  this.resultService.query = this.search;
+  this.router.navigate(['/search-results',{data:this.search}]);
+  this.search = '';
+}
+
+searchOptions(res:any){
+  this.resultService.query = res;
+  this.router.navigate(['/search-results',{data:res}]);
+}
 
 
 }

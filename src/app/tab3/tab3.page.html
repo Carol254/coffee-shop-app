@@ -1,29 +1,35 @@
 <ion-content>
   <ion-title class="desc">CART ITEMS</ion-title>
   <div class="swipeContainer">
-    <div *ngFor="let coffeType of coffeeTypes">
-      <ion-card class="ion-padding">
-        <div class="_content">
-          <ion-card-content>
-            <img src="{{coffeType.image}}">
-            <p class="l-Text">{{coffeType.name}}</p>
-            <p class="s-Text">{{coffeType.extras}}</p>
-           </ion-card-content>
-
-           <ion-card-content class="description">
-            <ion-title class="desc">Description</ion-title>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Ex ratione id deserunt nesciunt doloremque provident aliquam maxime unde 
-            fuga sed dicta perferendis repudiandae magni quam tempora, quia eaque qui rem?
-          </ion-card-content>
-
-           <ion-card-content><p class="l-Text cardPrice">Price:{{coffeType.price}}</p></ion-card-content>
-        </div> 
-      </ion-card>
-      <div class="deleteBtn">
-        <ion-icon name="trash" class="delete"></ion-icon>
+    <div *ngFor="let coffeType of coffeeTypes; let i = index" (swipe)="onSwipeRight($event,coffeType)">
+      <div class="cardItems">
+        <ion-card class="ion-padding" 
+            [ngClass]="{'swipedLeft':coffeType.swipedLeft}">
+            <div class="_content">
+              <ion-card-content>
+                <img src="{{coffeType.image}}">
+                <p class="l-Text">{{coffeType.name}}</p>
+                <p class="s-Text">{{coffeType.extras}}</p>
+              </ion-card-content>
+    
+              <ion-card-content class="description">
+                <ion-title class="desc">Description</ion-title>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ex ratione id deserunt nesciunt doloremque provident aliquam maxime unde 
+                fuga sed dicta perferendis repudiandae magni quam tempora, quia eaque qui rem?
+              </ion-card-content>
+    
+              <ion-card-content><p class="l-Text cardPrice">Price:{{coffeType.price}}</p></ion-card-content>
+            </div> 
+        </ion-card>
+  
+        <div class="deleteBtn" [ngClass]="{'hideBtn':!coffeType.swipedLeft}">
+          <ion-icon name="trash"></ion-icon>
+        </div>
       </div>
+ 
     </div>
+   
   </div>
   
   <ion-text>

@@ -56,10 +56,15 @@ img{
    }
  
    .deleteBtn{
-    .delete{
-        font-size:30px;
-        opacity: 0;
-    }
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+
+        ion-icon{
+            font-size: 40px;
+            cursor: pointer;
+        }
    }
 
 .cardPrice{
@@ -72,6 +77,17 @@ img{
 }
 ion-card{
     background: linear-gradient(0.25turn, #ff8e27, #ebf8e1, #ff8e27);
+    width: 100%;
+    
+}
+.swipedLeft{
+    margin-left: -52px;
+}
+.cardItems{
+    display: flex;
+}
+.hideBtn{
+    display: none;
 }
 @media screen and (max-width:800px){
     .description{

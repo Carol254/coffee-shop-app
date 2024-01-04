@@ -1,32 +1,56 @@
 <ion-content [fullscreen]="true">
     <div class="top">
-      <div class="header"> 
-        <div><ion-icon name="arrow-back" class="backBtn" (click)="back()"></ion-icon></div>
-        <form (submit)="getSearch($event)">
-          <ion-searchbar class="search" placeholder="Search your coffee..." [(ngModel)]="search" [ngModelOptions]="{standalone:true}"></ion-searchbar>
-        </form> 
-        <img src="\assets\latte.jpg" class="profile" routerLink="/profile">
-      </div>
-      <div class="intro">
-        <h3><b>Good {{currentTime}},</b></h3>
-        <p>Grab your first coffee this {{currentTime}}</p>
-      </div>
+        <div class="header"> 
+          <div><ion-icon name="arrow-back" class="backBtn" (click)="back()"></ion-icon></div>
+          <form (submit)="getSearch($event)">
+            <ion-searchbar class="search" placeholder="Search your coffee..." [(ngModel)]="search" [ngModelOptions]="{standalone:true}"></ion-searchbar>
+          </form> 
+          <img src="\assets\latte.jpg" class="profile" routerLink="/profile">
+        </div>
+        <div class="intro">
+          <h3><b>Good {{currentTime}},</b></h3>
+          <p>Grab your first coffee this {{currentTime}}</p>
+        </div>
 
       <div class="options" >
         <ion-button *ngFor="let option of options" (click)="searchOptions(option.name)"><ion-icon name= "{{option.icon}}" *ngIf="option.icon"></ion-icon> {{option.name}}</ion-button>
       </div>
 
       <div class="scroll-container">
-        <div class="types">
-            <div class="coffeeOptions">
-                <div class="cardImg"> <img src="\assets\cappucino.jpg" ></div>
+          <div class="types">
+              <div class="coffeeOptions">
+                  <div class="cardImg"> <img src="\assets\cappucino.jpg" ></div>
+                  <div class="cardInfo">
+                    <ion-card>
+                        <ion-card-header>
+                          <ion-card-title>
+                            <div class="title">
+                              <div class="name">Espresso</div>
+                              <div class="rate"><ion-icon name="star"></ion-icon> 4.5</div>
+                            </div>
+                          </ion-card-title>
+                          <ion-card-subtitle>With Milk</ion-card-subtitle>
+                        </ion-card-header>
+                      
+                        <ion-card-content>
+                          <div class="title">
+                            <div class="price">$7.00</div>
+                            <div class="add" routerLink="/cart">+</div>
+                          </div>
+                        </ion-card-content>
+                    </ion-card>
+                  </div>
+              </div>
+
+              <div class="coffeeOptions">
+                <div class="cardImg"> <img src="\assets\instant-coffee.jpg" ></div>
                 <div class="cardInfo">
                   <ion-card>
                       <ion-card-header>
                         <ion-card-title>
                           <div class="title">
-                            <div class="name">Espresso</div>
-                            <div class="rate"><ion-icon name="star"></ion-icon> 4.5</div>
+                            <div class="name">Coffee</div>
+                            <div class="rate"><ion-icon name="star"></ion-icon> 4.0</div>
                           </div>
                         </ion-card-title>
                         <ion-card-subtitle>With Milk</ion-card-subtitle>
@@ -34,7 +58,7 @@
                     
                       <ion-card-content>
                         <div class="title">
-                          <div class="price">$7.00</div>
+                          <div class="price">$6.25</div>
                           <div class="add" routerLink="/cart">+</div>
                         </div>
                       </ion-card-content>
@@ -42,30 +66,30 @@
                 </div>
             </div>
 
-            <div class="coffeeOptions">
-              <div class="cardImg"> <img src="\assets\instant-coffee.jpg" ></div>
-              <div class="cardInfo">
-                <ion-card>
-                    <ion-card-header>
-                      <ion-card-title>
+              <div class="coffeeOptions">
+                <div class="cardImg"> <img src="\assets\latte.jpg" ></div>
+                <div class="cardInfo">
+                  <ion-card>
+                      <ion-card-header>
+                        <ion-card-title>
+                          <div class="title">
+                            <div class="name">Latte</div>
+                            <div class="rate"><ion-icon name="star"></ion-icon> 4.2</div>
+                          </div>
+                        </ion-card-title>
+                        <ion-card-subtitle>With Milk</ion-card-subtitle>
+                      </ion-card-header>
+                    
+                      <ion-card-content>
                         <div class="title">
-                          <div class="name">Coffee</div>
-                          <div class="rate"><ion-icon name="star"></ion-icon> 4.0</div>
+                          <div class="price">$4.30</div>
+                          <div class="add">+</div>
                         </div>
-                      </ion-card-title>
-                      <ion-card-subtitle>With Milk</ion-card-subtitle>
-                    </ion-card-header>
-                  
-                    <ion-card-content>
-                      <div class="title">
-                        <div class="price">$6.25</div>
-                        <div class="add" routerLink="/cart">+</div>
-                      </div>
-                    </ion-card-content>
-                </ion-card>
-              </div>
-          </div>
-
+                      </ion-card-content>
+                  </ion-card>
+                </div>
+            </div>
+  
             <div class="coffeeOptions">
               <div class="cardImg"> <img src="\assets\latte.jpg" ></div>
               <div class="cardInfo">
@@ -89,33 +113,7 @@
                 </ion-card>
               </div>
           </div>
- 
-          <div class="coffeeOptions">
-            <div class="cardImg"> <img src="\assets\latte.jpg" ></div>
-            <div class="cardInfo">
-              <ion-card>
-                  <ion-card-header>
-                    <ion-card-title>
-                      <div class="title">
-                        <div class="name">Latte</div>
-                        <div class="rate"><ion-icon name="star"></ion-icon> 4.2</div>
-                      </div>
-                    </ion-card-title>
-                    <ion-card-subtitle>With Milk</ion-card-subtitle>
-                  </ion-card-header>
-                
-                  <ion-card-content>
-                    <div class="title">
-                      <div class="price">$4.30</div>
-                      <div class="add">+</div>
-                    </div>
-                  </ion-card-content>
-              </ion-card>
-            </div>
-        </div>
-
-
-        </div>
+          </div>
       </div>
 
       <div class="dealsBottom">
@@ -132,11 +130,8 @@
               </div>
             </div>
         </div>
-        
     </div>
     <div class="bottom">
-      
-      
     </div>
 </ion-content>
 

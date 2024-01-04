@@ -30,6 +30,7 @@ export class ResultsService {
 
   getResults():Observable<Recipe[]>{
     return this.http.get(`https://api.edamam.com/search?q=${this.query}&app_id=${this.APP_ID}&app_key=${this.APP_KEY}`).pipe(map((data:any)=>{
+      console.log('results for coffee',data);
       this.recipes = data.hits;
       return this.recipes;
     }))

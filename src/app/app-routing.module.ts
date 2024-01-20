@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'search-results',
     loadChildren: () => import('./search-results/search-results.module').then( m => m.SearchResultsPageModule)
+  },
+  {
+    path: 'check-out',
+    loadChildren: () => import('./check-out/check-out.module').then( m => m.CheckOutPageModule)
   }
     
 

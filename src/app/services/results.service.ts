@@ -19,8 +19,8 @@ export interface Recipe{
   providedIn: 'root'
 })
 export class ResultsService {
-  APP_ID:string = "";
-  APP_KEY:string = "";
+  APP_ID:string = "6bf43d57";
+  APP_KEY:string = "e1a583b723dec659c24d8d3bd474c5ed";
 
   query:string = '';
   recipes:Recipe[] = [];
